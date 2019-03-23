@@ -1,0 +1,7 @@
+Converts downloaded CSV of qultrics results to a CSV that buckets data and calculates the mean and SD of that data. The files include -
+
+a/ qutils.py - methods to calcualte mean and SD and also codify string to int
+
+b/ sutils.py - methods to extract buckets of data from a dataframe
+
+c/ *.py - frontend file that outlines the relevant survey data as a dictionary
