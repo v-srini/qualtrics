@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy  as np
 import logging as log
@@ -7,6 +8,12 @@ log.basicConfig(level = log.DEBUG)
 log.basicConfig(format='[%(process)d]: %(levelname)s %(message)s')
 
 file = "tsl.csv"
+if (os.path.isfile(file)):
+  pass
+else:
+  print "File \'"+file+"\' not found"
+  exit(0)
+
 df = pd.read_csv(file, skiprows=range(1,7))
 
 survey = {  'wtp': { 'que' : {'city': 'Q25', 'wild': 'Q26', 'tsla': 'Q28'}, 

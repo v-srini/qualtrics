@@ -1,8 +1,15 @@
+import os
 import pandas as pd
 import numpy  as np
 from sutils import *
 
 file = "tsl_ab2.csv"
+if (os.path.isfile(file)):
+  pass
+else:
+  print "File \'"+file+"\' not found"
+  exit(0)
+
 df = pd.read_csv(file, skiprows=range(1,3))
 
 survey = {  'wtp': { 'que' : {'phon': 'Q12', 'tsla': 'Q21'}, 
